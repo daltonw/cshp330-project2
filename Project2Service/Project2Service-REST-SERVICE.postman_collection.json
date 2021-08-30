@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "dcfe1468-3181-4c9d-b709-9f76b4671c0b",
+		"name": "Project2Service-REST-SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. POST to add a user",
+			"protocolProfileBehavior": {
+				"strictSSL": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Email\" : \"cathy@gmail.com\",\r\n    \"Password\":\"cathyPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ContactServer}}/api/contacts/",
+					"host": [
+						"{{ContactServer}}"
+					],
+					"path": [
+						"api",
+						"contacts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. PUT {ID} to update a user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Password\" : \"cathyPassword-updated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ContactServer}}/api/contacts/101",
+					"host": [
+						"{{ContactServer}}"
+					],
+					"path": [
+						"api",
+						"contacts",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. GET to get all users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{ContactServer}}/api/contacts",
+					"host": [
+						"{{ContactServer}}"
+					],
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. GET {ID} to get a single user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ContactServer}}/api/contacts/101",
+					"host": [
+						"{{ContactServer}}"
+					],
+					"path": [
+						"api",
+						"contacts",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. DELETE {ID} to delete a single user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ContactServer}}/api/contacts/101",
+					"host": [
+						"{{ContactServer}}"
+					],
+					"path": [
+						"api",
+						"contacts",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
