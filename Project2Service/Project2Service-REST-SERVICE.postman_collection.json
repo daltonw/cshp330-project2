@@ -15,7 +15,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Email\" : \"cathy@gmail.com\",\r\n    \"Password\":\"cathyPassword\"\r\n}",
+					"raw": "{\r\n    \"Email\" : \"roger@gmail.com\",\r\n    \"Password\" : \"rogerPassword\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,7 +43,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"Password\" : \"cathyPassword-updated\"\r\n}",
+					"raw": "{\r\n    \"Password\" : \"davePassword-updated\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -51,14 +51,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{ContactServer}}/api/contacts/101",
+					"raw": "{{ContactServer}}/api/contacts/105",
 					"host": [
 						"{{ContactServer}}"
 					],
 					"path": [
 						"api",
 						"contacts",
-						"101"
+						"105"
 					]
 				}
 			},
@@ -94,14 +94,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{ContactServer}}/api/contacts/101",
+					"raw": "{{ContactServer}}/api/contacts/105",
 					"host": [
 						"{{ContactServer}}"
 					],
 					"path": [
 						"api",
 						"contacts",
-						"101"
+						"105"
 					]
 				}
 			},
@@ -113,14 +113,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{ContactServer}}/api/contacts/101",
+					"raw": "{{ContactServer}}/api/contacts/105",
 					"host": [
 						"{{ContactServer}}"
 					],
 					"path": [
 						"api",
 						"contacts",
-						"101"
+						"105"
 					]
 				}
 			},
