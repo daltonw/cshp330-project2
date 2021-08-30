@@ -15,20 +15,27 @@ namespace Project2Service.Controllers
         private static int currentId = 101;
         private static List<Contact> contacts = new List<Contact>();
 
-        // GET: api/Contacts
+        // GET: api/<ContactsController>
         [HttpGet]
-        public IEnumerable<Contact> Get()
+        public IActionResult Get()
         {
-            return contacts;
+            return Ok(contacts);
         }
 
-        // GET: api/Contacts/5
+        // GET: api/<ContactsController>/101
         [HttpGet("{id}", Name = "Get")]
-        public Contact Get(int id)
+        public IActionResult Get(int id)
         {
             var contact = contacts.FirstOrDefault(t => t.Id == id);
 
-            return contact;
+            if (contact == null)
+            {
+                return new NotFoundResult();
+            }
+            else
+            {
+                return Ok(contact);
+            }
         }
 
         // POST: api/Contacts
@@ -44,7 +51,9 @@ namespace Project2Service.Controllers
             {
                 return BadRequest(new ErrorResponse
                 {
-                    Message = "Both Email and Password are required. Please try again.",
+                    Message = "Both Email and Password are required. " +
+                              "Your add user request has failed. "  +
+                              "Please try again.",
                     Email = value.Email,
                     Password = value.Password
                 });
